@@ -1,0 +1,29 @@
+# Lumen World | Design brief
+
+- **Design read:** A curious, design-literate visitor enters a quiet speculative world that feels tactile, cinematic, and discoverable rather than like a conventional agency landing page.
+- **Concept spine:** The Aperture Garden. One impossible glass-and-mineral object gradually reveals its inner structure as the visitor moves through the page.
+- **Delivery tier:** spectacle. Immersive 3D, one continuous scroll-controlled camera journey, a second interactive depth beat, and custom cursor only where pointer precision exists.
+- **Animation mode:** animated-website
+- **Journey shape:** single-shot. The brand story follows one sculptural object from its full silhouette to its refractive core, so one continuous film is more coherent than multiple stitched worlds.
+- **Journey:** The opening is the full object suspended above a reflective mineral plane. The next content chapter introduces material and light. The third reveals the object's layered geometry. The final chapter frames the world as a studio for digital experiences and invites contact.
+- **World grammar:** sculptural translucent glass, brushed silver, dark mineral surfaces, subtle volumetric haze, petrol teal shadows, a restrained coral accent, cool key light from upper left, centered safe focal point, locked exposure, near-black teal background with ample negative space. No on-film text or logos.
+- **Mobile framing:** Keep the main object centered in the middle 55% of the frame, crop outer rings freely, use the mobile encode at 720px max height, and preserve the chapter text as normal semantic content.
+- **Delivery budget:** ≤32 MiB desktop film and ≤16 MiB mobile film. Extract posters from the exact encoded clips.
+- **Palette:** background #0C1718, surface #142526, primary ink #F0F4EF, muted ink #A5B7B2, accent #E66B5B. The cool mineral world with one coral signal feels physical and unusual without default neon or purple tropes.
+- **Type:** Cabinet Grotesk display with IBM Plex Mono for navigation, metadata, and small labels. Strong geometric display type contrasts with precise instrument-like annotations.
+- **Corner language:** Mostly sharp architectural edges with occasional 18px soft surfaces for the one studio feature panel; no random pills.
+- **Hero architecture:** Left-aligned editorial copy over a centered film, with a compact top rail and chapter navigation. The film carries the depth; text remains high contrast and selectable.
+- **Section plan:** 1) scroll-scrub opening film and headline, 2) asymmetric two-column material note, 3) wide technical specimen panel with layered depth, 4) editorial contact band, 5) minimal footer. Each section uses a different layout family.
+- **Signature motion:** Scroll is the camera dolly. Visitors directly control the film's timeline; surrounding elements use short transform-only entrances and restrained hover feedback.
+- **Second beat:** A perspective specimen stage with pointer-driven parallax on desktop and static depth on touch devices.
+- **CTA inventory:** Hero “Explore the world” uses a route-arrow link. Contact “Start a project” uses a corner-bracket target. Footer “Back to top” is a compact mono control. Each has its own interaction identity.
+- **Asset plan:** Generate one six-frame storyboard; one continuous 15s film; desktop/mobile encodes; first-frame posters for both; brand wordmark and favicon; a coherent custom icon sheet; three section images; one launch cover/OG image; and a site manifest. Only assets actually referenced by the page belong in public assets.
+- **Image treatment:** Low-detail dark backgrounds, precise highlights, reflective material, no text rendered into imagery, no stock imagery, no purple glow, no neon cyan, and no warm beige/brass palette.
+- **Accessibility:** Semantic landmarks, visible keyboard focus, meaningful link labels, high-contrast body copy, touch-friendly navigation, and complete static story under reduced-motion preferences.
+- **Responsive behavior:** Desktop uses asymmetric copy and a full-bleed film; tablet narrows copy and keeps the object center-safe; mobile reduces decorative elements, stacks the supporting sections, and uses the lighter film encode.
+- **Performance:** Lazy-load nearby video only through the shipped scrub engine, avoid unnecessary dependencies, use compressed image formats, and never fetch film under reduced-motion preference.
+- **SEO:** Distinct title and description, canonical URL, Open Graph and Twitter image, favicon family, web manifest, robots.txt, and sitemap.xml.
+- **Security:** Preserve SSR-safe rendering, same-origin media paths, `blob:` in the media CSP for the scrub engine, and the scaffold's security-header wrapper.
+- **Anti-convergence ledger:** Previous build in this chat: no prior website build established. This direction deliberately avoids graphite/orange, neon cyan, beige/brass, and AI-violet palettes. Identity axes are mineral teal/coral palette, Cabinet Grotesk + IBM Plex Mono, sculptural full-bleed hero, A4 scroll-scrub, route-arrow/corner-target CTA garments, and architectural sharp-edge corner language.
+- **Copy rule:** Direct, concrete language; no invented performance statistics, testimonials, or filler marketing claims.
+- **Status:** Code can be prepared now. Generated visual assets and final deploy remain blocked until the Higgsfield workspace has generation credits.

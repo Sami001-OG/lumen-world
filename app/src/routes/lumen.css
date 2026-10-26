@@ -1,0 +1,123 @@
+.lumen-site {
+  --lw-bg: #0c1718;
+  --lw-surface: #142526;
+  --lw-ink: #f0f4ef;
+  --lw-muted: #a5b7b2;
+  --lw-accent: #e66b5b;
+  --lw-line: rgba(209, 226, 219, 0.18);
+  background: var(--lw-bg);
+  color: var(--lw-ink);
+  font-family: 'Cabinet Grotesk', 'Arial', sans-serif;
+  overflow: clip;
+}
+.lumen-site * { box-sizing: border-box; }
+.lumen-site a { color: inherit; text-decoration: none; }
+.lumen-site a:focus-visible, .lumen-site button:focus-visible { outline: 2px solid var(--lw-accent); outline-offset: 5px; }
+.lumen-nav {
+  position: absolute; z-index: 20; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 82px; padding: 0 clamp(1.2rem, 5.5vw, 5.5rem);
+  border-bottom: 1px solid rgba(209, 226, 219, 0.13);
+  background: linear-gradient(180deg, rgba(12,23,24,.82), rgba(12,23,24,0));
+}
+.lumen-brand { display: inline-flex; align-items: center; gap: 11px; font-size: 12px; letter-spacing: .15em; font-weight: 700; white-space: nowrap; }
+.lumen-brand b { color: var(--lw-muted); font-weight: 400; }
+.lumen-mark { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 27px; height: 27px; border: 1px solid rgba(240,244,239,.7); border-radius: 50%; transform: rotate(-30deg); }
+.lumen-mark i { display: block; position: absolute; width: 17px; height: 7px; border: 1px solid var(--lw-accent); border-radius: 50%; }
+.lumen-mark i:nth-child(2) { transform: rotate(60deg); }
+.lumen-mark i:nth-child(3) { transform: rotate(120deg); }
+.lumen-links { display: flex; align-items: center; gap: clamp(1.3rem, 3vw, 3rem); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--lw-muted); }
+.lumen-links a { transition: color .2s ease, transform .2s ease; }
+.lumen-links a:hover { color: var(--lw-ink); transform: translateY(-1px); }
+.lumen-nav-contact { color: var(--lw-ink) !important; padding: 10px 0; border-bottom: 1px solid var(--lw-accent); }
+.lumen-nav-contact span { color: var(--lw-accent); margin-left: 12px; }
+.lumen-menu { display: none; }
+.lumen-journey { position: relative; }
+.lumen-hero-note { position: absolute; z-index: 4; bottom: 2rem; left: clamp(1.25rem, 5.5vw, 5.5rem); right: clamp(1.25rem, 5.5vw, 5.5rem); display: flex; align-items: center; gap: 16px; pointer-events: none; }
+.lumen-coordinate, .lumen-mono, .lumen-small-label, .lumen-section-index, .lumen-material-caption, .lumen-contact-code, .lumen-note-index { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; }
+.lumen-coordinate { color: var(--lw-muted); }
+.lumen-hero-rule { height: 1px; width: clamp(30px, 12vw, 180px); background: var(--lw-accent); opacity: .75; }
+.lumen-approach { display: grid; grid-template-columns: minmax(130px, .65fr) minmax(280px, 1fr) minmax(280px, .95fr); gap: clamp(2rem, 4vw, 4rem); align-items: center; padding: clamp(6rem, 12vw, 12rem) clamp(1.25rem, 7vw, 7rem); border-top: 1px solid var(--lw-line); }
+.lumen-section-index { align-self: start; display: flex; flex-direction: column; gap: 8px; color: var(--lw-muted); }
+.lumen-section-index span:first-child { color: var(--lw-accent); font-size: 12px; }
+.lumen-small-label { color: var(--lw-accent); margin: 0 0 1.5rem; }
+.lumen-approach-copy h2, .lumen-specimen-heading h2, .lumen-contact-copy h2 { margin: 0; font-size: clamp(2.8rem, 5.5vw, 6.2rem); line-height: .98; letter-spacing: -.065em; font-weight: 500; text-wrap: balance; }
+.lumen-approach-copy h2 em, .lumen-specimen-heading h2 em, .lumen-contact-copy h2 em { color: var(--lw-accent); font-style: normal; }
+.lumen-lede { max-width: 34ch; margin: 2rem 0 2.2rem; color: var(--lw-muted); font-size: clamp(1rem, 1.35vw, 1.2rem); line-height: 1.6; }
+.lumen-arrow-link { display: inline-flex; align-items: center; gap: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 0 0 12px; border-bottom: 1px solid var(--lw-line); transition: gap .25s ease, border-color .25s ease; }
+.lumen-arrow-link span { color: var(--lw-accent); font-size: 16px; }
+.lumen-arrow-link:hover { gap: 34px; border-color: var(--lw-accent); }
+.lumen-material-study { position: relative; aspect-ratio: .92; min-height: 320px; overflow: hidden; background: radial-gradient(ellipse at 48% 42%, #244647 0%, #142526 36%, #0c1718 72%); perspective: 900px; isolation: isolate; }
+.lumen-material-study::before { content: ''; position: absolute; inset: 12%; border: 1px solid rgba(218,237,229,.16); transform: rotateX(66deg) rotateZ(-18deg); border-radius: 50%; box-shadow: 0 0 70px rgba(77,128,125,.12); }
+.lumen-orbit { position: absolute; inset: 15% 7%; border: 1px solid rgba(203,226,219,.45); border-radius: 50%; transform: rotateX(68deg) rotateZ(24deg); animation: lumen-orbit 18s linear infinite; }
+.lumen-orbit-b { inset: 23% 13%; border-color: rgba(230,107,91,.65); transform: rotateX(66deg) rotateZ(-38deg); animation-direction: reverse; animation-duration: 24s; }
+.lumen-glass-core { position: absolute; top: 50%; left: 50%; width: 42%; aspect-ratio: 1; border-radius: 42% 58% 56% 44% / 47% 40% 60% 53%; transform: translate(-50%, -50%) rotate(26deg); background: radial-gradient(circle at 30% 22%, rgba(255,255,255,.9), rgba(186,218,209,.45) 8%, rgba(79,137,133,.32) 25%, rgba(19,46,48,.25) 50%, rgba(4,14,15,.8) 72%); border: 1px solid rgba(227,245,239,.65); box-shadow: inset -16px -24px 40px rgba(4,12,13,.7), inset 10px 8px 20px rgba(236,255,248,.28), 0 0 65px rgba(82,156,151,.22); animation: lumen-breathe 7s ease-in-out infinite alternate; }
+.lumen-glass-core span { position: absolute; inset: 17%; border: 1px solid rgba(238,249,244,.5); border-radius: 50%; transform: rotateX(56deg) rotateZ(42deg); }
+.lumen-material-caption { position: absolute; left: 1.2rem; right: 1.2rem; bottom: 1.1rem; display: flex; justify-content: space-between; gap: 1rem; color: var(--lw-muted); font-size: 8px; }
+.lumen-specimen { padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 7vw, 7rem); background: #122122; border-top: 1px solid var(--lw-line); }
+.lumen-specimen-heading { max-width: 850px; margin: 0 auto clamp(4rem, 9vw, 8rem); text-align: center; }
+.lumen-specimen-heading .lumen-small-label { margin-bottom: 1.3rem; }
+.lumen-specimen-grid { display: grid; grid-template-columns: 1.1fr .9fr; max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--lw-line); border-bottom: 1px solid var(--lw-line); }
+.lumen-specimen-feature { position: relative; min-height: 390px; padding: clamp(2rem, 4vw, 4.5rem); display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; overflow: hidden; background: radial-gradient(ellipse at 22% 20%, rgba(83,132,127,.22), transparent 56%); border-right: 1px solid var(--lw-line); }
+.lumen-specimen-glyph { position: absolute; top: 1rem; right: 1.7rem; color: rgba(230,107,91,.7); font-size: clamp(8rem, 17vw, 17rem); font-weight: 200; line-height: 1; transform: rotate(-16deg); }
+.lumen-mono { color: var(--lw-accent); margin: 0 0 1rem; }
+.lumen-specimen-feature h3, .lumen-specimen-note h3 { position: relative; max-width: 13ch; margin: 0; font-size: clamp(2rem, 3vw, 3.5rem); line-height: 1.02; letter-spacing: -.05em; font-weight: 500; }
+.lumen-specimen-feature > p:last-child, .lumen-specimen-note > p:not(.lumen-mono) { max-width: 36ch; color: var(--lw-muted); line-height: 1.7; font-size: 14px; }
+.lumen-specimen-note { min-height: 390px; padding: clamp(2rem, 4vw, 4.5rem); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.lumen-note-line { width: 54px; height: 2px; background: var(--lw-accent); margin-bottom: 2.5rem; }
+.lumen-note-index { display: flex; justify-content: space-between; width: 100%; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--lw-line); color: var(--lw-muted); font-size: 8px; }
+.lumen-note-index strong { color: var(--lw-ink); font-weight: 400; }
+.lumen-contact { position: relative; display: flex; align-items: center; min-height: 600px; padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 12vw, 12rem); overflow: hidden; border-top: 1px solid var(--lw-line); }
+.lumen-contact-copy { position: relative; z-index: 2; max-width: 720px; }
+.lumen-contact-copy > p:not(.lumen-small-label) { max-width: 38ch; margin: 1.7rem 0 2.4rem; color: var(--lw-muted); line-height: 1.7; }
+.lumen-contact-link { display: inline-flex; align-items: center; gap: 2rem; padding: 16px 0; border-top: 1px solid var(--lw-accent); border-bottom: 1px solid var(--lw-accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; transition: padding .25s ease, background .25s ease; }
+.lumen-contact-link span:last-child { color: var(--lw-accent); font-size: 19px; }
+.lumen-contact-link:hover { padding-left: 18px; padding-right: 18px; background: rgba(230,107,91,.06); }
+.lumen-contact-orbit { position: absolute; right: -6%; top: 5%; width: 52%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(166,198,189,.18); transform: rotateX(65deg) rotateZ(-25deg); box-shadow: 0 0 0 32px rgba(166,198,189,.025), 0 0 0 74px rgba(166,198,189,.02); }
+.lumen-contact-orbit::before, .lumen-contact-orbit::after { content: ''; position: absolute; inset: 15%; border: 1px solid rgba(230,107,91,.42); border-radius: 50%; transform: rotateY(56deg); }
+.lumen-contact-orbit::after { inset: 27%; border-color: rgba(206,226,218,.4); transform: rotateY(-56deg) rotateZ(32deg); }
+.lumen-contact-orbit span { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: var(--lw-accent); box-shadow: 0 0 25px rgba(230,107,91,.45); }
+.lumen-contact-orbit span:nth-child(1) { top: 16%; left: 21%; }
+.lumen-contact-orbit span:nth-child(2) { right: 19%; top: 46%; width: 6px; height: 6px; }
+.lumen-contact-orbit span:nth-child(3) { left: 47%; bottom: 13%; width: 8px; height: 8px; }
+.lumen-contact-code { position: absolute; right: clamp(1.25rem, 5vw, 5rem); bottom: 2rem; color: var(--lw-muted); font-size: 8px; }
+.lumen-footer { min-height: 105px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.5rem clamp(1.25rem, 5.5vw, 5.5rem); border-top: 1px solid var(--lw-line); }
+.lumen-footer p, .lumen-back-top { color: var(--lw-muted); font-family: 'IBM Plex Mono', monospace; font-size: 10px; }
+.lumen-back-top { color: var(--lw-ink); border-bottom: 1px solid var(--lw-accent); padding-bottom: 8px; }
+@keyframes lumen-orbit { from { transform: rotateX(68deg) rotateZ(24deg); } to { transform: rotateX(68deg) rotateZ(384deg); } }
+@keyframes lumen-breathe { from { transform: translate(-50%, -50%) rotate(26deg) scale(.96); } to { transform: translate(-50%, -50%) rotate(38deg) scale(1.04); } }
+@media (max-width: 900px) {
+  .lumen-approach { grid-template-columns: 1fr 1.25fr; }
+  .lumen-section-index { grid-column: 1 / -1; flex-direction: row; gap: 1rem; }
+  .lumen-material-study { grid-column: 1 / -1; width: min(100%, 620px); margin: 1rem auto 0; aspect-ratio: 1.2; }
+  .lumen-contact { min-height: 560px; padding-left: 7vw; }
+  .lumen-contact-orbit { right: -22%; width: 65%; opacity: .6; }
+}
+@media (max-width: 640px) {
+  .lumen-nav { min-height: 70px; padding: 0 1.15rem; }
+  .lumen-menu { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 42px; height: 42px; border: 1px solid var(--lw-line); background: transparent; color: var(--lw-ink); }
+  .lumen-menu span { display: block; width: 15px; height: 1px; background: var(--lw-ink); margin: 0 auto; }
+  .lumen-links { display: none; position: absolute; top: 69px; left: 0; right: 0; padding: 1.4rem 1.25rem 1.8rem; flex-direction: column; align-items: flex-start; gap: 1.4rem; background: rgba(12,23,24,.97); border-bottom: 1px solid var(--lw-line); }
+  .lumen-links.is-open { display: flex; }
+  .lumen-hero-note { bottom: 1.2rem; gap: 10px; }
+  .lumen-coordinate { font-size: 7px; }
+  .lumen-hero-rule { width: 35px; }
+  .lumen-approach { grid-template-columns: 1fr; padding: 5.5rem 1.25rem; gap: 2.2rem; }
+  .lumen-section-index { grid-column: auto; }
+  .lumen-approach-copy h2, .lumen-specimen-heading h2, .lumen-contact-copy h2 { font-size: clamp(2.8rem, 12vw, 4.5rem); }
+  .lumen-material-study { min-height: 280px; aspect-ratio: 1; }
+  .lumen-specimen { padding: 5rem 1.25rem; }
+  .lumen-specimen-heading { text-align: left; margin-bottom: 3.5rem; }
+  .lumen-specimen-grid { grid-template-columns: 1fr; }
+  .lumen-specimen-feature { min-height: 330px; border-right: 0; border-bottom: 1px solid var(--lw-line); padding: 2rem 1.5rem; }
+  .lumen-specimen-note { min-height: 320px; padding: 2.5rem 1.5rem; }
+  .lumen-specimen-glyph { font-size: 9rem; }
+  .lumen-contact { min-height: 580px; padding: 5rem 1.25rem; align-items: flex-start; }
+  .lumen-contact-orbit { width: 105%; right: -52%; top: 24%; opacity: .35; }
+  .lumen-contact-code { right: 1.25rem; bottom: 1.25rem; }
+  .lumen-footer { align-items: flex-start; flex-wrap: wrap; padding: 1.7rem 1.25rem; gap: 1.3rem; }
+  .lumen-footer p { width: 100%; order: 3; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lumen-site *, .lumen-site *::before, .lumen-site *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
