@@ -11,6 +11,7 @@ const base = process.env.PAGES_BASE ?? "/lumen-world/";
 
 export default defineConfig({
   base,
+  define: { __HF_DESIGN_INSPECTOR__: "false" },
   resolve: {
     tsconfigPaths: true,
     alias: [{ find: /^@higgsfield-ai\/icons(\/.*)?$/, replacement: QUANTA_ICONS_SHIM }],
