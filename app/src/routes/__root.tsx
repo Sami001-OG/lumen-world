@@ -136,6 +136,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-q-body-sm-regular text-q-text-secondary">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
+        <pre className="mt-3 max-h-40 overflow-auto whitespace-pre-wrap break-words text-left text-xs text-q-text-secondary">
+          {String(error?.stack ?? error?.message ?? error).slice(0, 800)}
+        </pre>
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
