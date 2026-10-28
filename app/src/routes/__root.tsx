@@ -16,6 +16,7 @@ import { reportHiggsfieldError } from "../lib/higgsfield-error-reporting";
 // Page metadata (browser <title>/favicon + social og: tags) committed into the
 // repo by the marketplace meta API and read at BUILD time — no runtime fetch.
 // Editing it via the app settings UI rewrites this file and redeploys the app.
+import { THEME_COLOR } from "../lib/theme-color";
 import appMetaJson from "../app-meta.json";
 
 declare const __HF_DESIGN_INSPECTOR__: boolean;
@@ -78,7 +79,7 @@ function buildHead(meta: AppMeta) {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#0C1718" },
+      { name: "theme-color", content: THEME_COLOR },
       { title },
       { name: "description", content: description },
       { name: "author", content: "Lumen World" },

@@ -11,16 +11,18 @@ export const scrollScrubTheme: ScrollScrubTheme = {
   muted: "#A5B7B2",
 };
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 export const scrollScrubScenes: ScrollScrubScene[] = [
   {
     body: "A study in light, material, and the spaces between the visible and the imagined.",
-    clip: "/assets/world/lumen-journey.mp4",
+    clip: `${BASE}/assets/world/lumen-journey.mp4`,
     id: "aperture-garden",
     kicker: "An independent digital studio",
     label: "The world",
-    mobileClip: "/assets/world/lumen-journey-mobile.mp4",
-    mobilePoster: "/assets/world/lumen-journey-mobile-poster.png",
-    poster: "/assets/world/lumen-journey-poster.png",
+    mobileClip: `${BASE}/assets/world/lumen-journey-mobile.mp4`,
+    mobilePoster: `${BASE}/assets/world/lumen-journey-mobile-poster.png`,
+    poster: `${BASE}/assets/world/lumen-journey-poster.png`,
     tags: ["Spatial design", "Digital craft"],
     title: "Make room for wonder.",
     scroll: 3.2,
